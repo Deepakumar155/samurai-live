@@ -7,3 +7,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// Dark Mode Toggle
+const toggleBtn = document.getElementById("darkModeToggle");
+const body = document.body;
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  // Save preference
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+    toggleBtn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleBtn.textContent = "🌙";
+  }
+});
+

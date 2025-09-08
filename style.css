@@ -1,3 +1,24 @@
+/* Default Light Theme */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --navbar-bg: #111;
+  --card-bg: #fff;
+  --accent: #f39c12;
+  --footer-bg: #111;
+  --f-co:#fff;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f9f9f9;
+  --navbar-bg: #1e1e1e;
+  --card-bg: #1e1e1e;
+  --accent: #f39c12;
+  --footer-bg: #1e1e1e;
+  --f-co:#fff;
+}
 /* Reset */
 * {
     margin: 0;
@@ -7,9 +28,10 @@
 }
 
 body {
-    background: #f9f9f9;
-    color: #333;
+    background: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
+    transition: 0.3s ease;
 }
 
 /* Navbar */
@@ -18,7 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: #111;
+    background: var(--navbar-bg);
     color: #fff;
 }
 
@@ -71,7 +93,7 @@ body {
 
 .video-grid iframe {
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
 }
 
@@ -98,8 +120,8 @@ body {
 footer {
     text-align: center;
     padding: 15px;
-    background: #111;
-    color: white;
+    background: var(--footer-bg);
+    color: var(--f-co);
 }
 
 /* Responsive */
@@ -176,4 +198,21 @@ footer {
 }
 .social-links a:hover {
   color: #d35400;
+}
+/* Toggle Button */
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(#f39c12);
+  margin-left: 15px;
+  transition: 0.3s;
+}
+.dark-toggle:hover {
+  transform: scale(1.2);
+}
+.about, .videos, .contact, .about-page, .about-box {
+  background: var(--card-bg);
+  color: var(--text-color);
 }
