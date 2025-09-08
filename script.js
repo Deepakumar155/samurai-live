@@ -41,7 +41,9 @@ const videos = [
   "https://youtu.be/DfkpHkZ1ttI?si=7SkGXb7kjrtMa5Ma",
   "https://youtu.be/JOrsH83g2-c?si=lwBm8ESwTDXl8yXZ",
   "https://youtu.be/8_S4r0ymOfI?si=fUk9xHojMqIudDPi",
-  "https://youtu.be/JYGq23MlRao?si=DpTomNKy7SiOtALd"
+  "https://youtu.be/JYGq23MlRao?si=DpTomNKy7SiOtALd",
+  "https://youtu.be/wkrTT2fP-aU?si=CCliopwO7L04hrDA",
+  "https://youtu.be/1vkxr0WxNDY?si=-E5Ng08CdY1fO3lN"
 ];
 
 randomBtn.addEventListener("click", () => {
