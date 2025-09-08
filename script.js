@@ -29,4 +29,23 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙";
   }
 });
+// Random Video Button 🎲
+const randomBtn = document.getElementById("randomBtn");
+
+// Add your video links here
+const videos = [
+  "https://www.youtube.com/watch?v=2fFQiYFtR-M",
+  "https://www.youtube.com/watch?v=No6EeSB6Ipg",
+  "https://www.youtube.com/watch?v=HuXvCJqHK4E",
+  "https://www.youtube.com/watch?v=TowyAwlpnVI",
+  "https://youtu.be/DfkpHkZ1ttI?si=7SkGXb7kjrtMa5Ma",
+  "https://youtu.be/JOrsH83g2-c?si=lwBm8ESwTDXl8yXZ",
+  "https://youtu.be/8_S4r0ymOfI?si=fUk9xHojMqIudDPi",
+  "https://youtu.be/JYGq23MlRao?si=DpTomNKy7SiOtALd"
+];
+
+randomBtn.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * videos.length);
+  window.open(videos[randomIndex], "_blank");
+});
 
